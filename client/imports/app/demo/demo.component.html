@@ -1,0 +1,13 @@
+<h2>{{greeting}}</h2>
+
+This is the available data:
+<ul>
+    <li *ngFor="let item of data | async">
+        {{item.name}} ({{item.age}}) <button (click)="remove(item);">X</button>
+    </li>
+</ul>
+
+<input type="text" name="name" value="" placeholder="your name" [(ngModel)]="name">
+<input type="number" name="name" value="" placeholder="your age" [(ngModel)]="age">
+
+<button type="button" (click)="add();" [disabled]="name == '' || age <= 0" >Add it</button>
