@@ -28,11 +28,11 @@ export class DemoComponent implements OnInit {
   }
 
   add(){
-    var jochen:Demo = {
+    var newRecord:Demo = {
       age: this.age,
       name: this.name
     }
-    this.demoDataService.add(jochen);
+    this.demoDataService.add(newRecord);
 
     this.name = "";
     this.age = 0;
